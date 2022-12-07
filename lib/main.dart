@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const HomeScreen(),
 
-      // This is global theme
+      // This is global theme used throughout the app
       theme: defaultTheme,
     );
   }
