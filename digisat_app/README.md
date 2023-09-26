@@ -16,6 +16,11 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 Color:
+
+Violet shade:
+#764B81: Mouve
+#AF69ED:
+
 bg:#6E58FC
 bgover:#7D67FB
 button:#6D5AFB

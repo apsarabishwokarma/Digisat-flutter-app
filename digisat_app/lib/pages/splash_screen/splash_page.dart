@@ -1,3 +1,6 @@
+import 'package:digisat_app/pages/splash_screen/splash_page_1.dart';
+import 'package:digisat_app/pages/splash_screen/splash_page_2.dart';
+import 'package:digisat_app/pages/splash_screen/splash_page_3.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -17,16 +20,10 @@ class SplashPage extends StatelessWidget {
         children: [
           PageView(
             controller: _controller,
-            children: [
-              Container(
-                color: Colors.blue,
-              ),
-              Container(
-                color: Colors.yellow,
-              ),
-              Container(
-                color: Colors.green,
-              )
+            children: const [
+              SplashPage1(),
+              SplashPage2(),
+              SplashPage3(),
             ],
           ),
           //dot indicator
