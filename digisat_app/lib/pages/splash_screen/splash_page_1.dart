@@ -6,7 +6,14 @@ class SplashPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      //color: Colors.blue.shade800,
+      decoration: const BoxDecoration(
+        //Image.asset('assets/images/SplashScreen.png'),
+        image: DecorationImage(
+          image: AssetImage('assets/images/SplashScreen.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }
