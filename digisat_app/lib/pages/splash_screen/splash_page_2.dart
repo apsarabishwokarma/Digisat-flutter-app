@@ -12,6 +12,7 @@ class SplashPage2 extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
+      //child: const Text("Online learning"),
     );
   }
 }
