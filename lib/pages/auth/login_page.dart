@@ -5,8 +5,13 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        //backgroundColor: Color.fromARGB(0, 90, 12, 192),
-        );
+    return Container(
+      decoration: const BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage('assets/images/AuthScreen.png'),
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
   }
 }

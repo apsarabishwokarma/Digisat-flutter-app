@@ -1,4 +1,5 @@
-import 'package:digisat_app/pages/splash_screen/splash_page.dart';
+import 'package:digisat_app/pages/auth/login_or_sign_page.dart';
+import 'package:digisat_app/pages/auth/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,11 @@ class DigiSat extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
       //primarySwatch: Colors.blue,
-      home: LoginPage(),
+      home: LoginSignUpPage(),
     );
   }
 }
