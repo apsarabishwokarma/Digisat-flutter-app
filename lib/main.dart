@@ -15,7 +15,7 @@ class DigiSat extends StatelessWidget {
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
       //primarySwatch: Colors.blue,
-      home: SplashPage(),
+      home: LoginPage(),
     );
   }
 }
