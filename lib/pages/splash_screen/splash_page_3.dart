@@ -12,6 +12,25 @@ class SplashPage3 extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
+      child: SafeArea(
+        child: Column(
+          children: [
+            const Spacer(),
+            Image.asset(
+              'assets/images/splashimage3.png',
+              height: 250,
+            ),
+            const Spacer(),
+            const Text(
+              "Prepare Smarter, Score Higher ",
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            const Spacer(),
+          ],
+        ),
+      ),
     );
   }
 }

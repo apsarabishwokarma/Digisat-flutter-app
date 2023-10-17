@@ -1,5 +1,4 @@
 import 'package:digisat_app/pages/auth/login_or_sign_page.dart';
-import 'package:digisat_app/pages/auth/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
