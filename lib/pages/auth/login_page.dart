@@ -12,6 +12,26 @@ class LoginPage extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
+      child: const Column(
+        children: [
+          Text(
+            "Login",
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black, decoration: TextDecoration.none),
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Text(
+            "Welcome back! Access your SAT preparation journey ",
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w400,
+              color: Colors.black,
+              decoration: TextDecoration.none,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
