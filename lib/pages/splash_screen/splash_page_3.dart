@@ -23,9 +23,7 @@ class SplashPage3 extends StatelessWidget {
             const Spacer(),
             const Text(
               "Prepare Smarter, Score Higher ",
-              style: TextStyle(
-                fontSize: 16,
-              ),
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400, color: Colors.white),
             ),
             const Spacer(),
           ],

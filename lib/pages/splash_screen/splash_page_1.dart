@@ -21,9 +21,10 @@ class SplashPage1 extends StatelessWidget {
               height: 250,
               alignment: Alignment.center,
             ),
+            const SizedBox(height: 10),
             const Text(
               "DIGISAT",
-              style: TextStyle(fontSize: 16),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600, color: Colors.white),
             ),
           ],
         ),

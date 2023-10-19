@@ -12,11 +12,19 @@ class SplashPage2 extends StatelessWidget {
           fit: BoxFit.cover,
         ),
       ),
-      //child: const Text("Online learning"),
       child: SafeArea(
         child: Column(
           children: [
             const Spacer(),
+            const Text(
+              "Skip",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.right,
+            ),
             Image.asset(
               'assets/images/splashimage2.png',
               height: 250,
@@ -26,8 +34,9 @@ class SplashPage2 extends StatelessWidget {
               "Empowering Your SAT Success",
               textAlign: TextAlign.center,
               style: TextStyle(
+                fontWeight: FontWeight.w400,
                 fontSize: 16,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
             const Spacer(),

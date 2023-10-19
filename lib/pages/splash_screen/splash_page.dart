@@ -24,7 +24,20 @@ class SplashPage extends StatelessWidget {
             ],
           ),
           //dot indicator
-          Container(alignment: const Alignment(0, 0.75), child: SmoothPageIndicator(controller: _controller, count: 3))
+          Container(
+            alignment: const Alignment(0, 0.75), // Adjust the alignment as needed
+            child: SmoothPageIndicator(
+              controller: _controller,
+              count: 3,
+              effect: const WormEffect(
+                // You can use a different effect for the indicator
+                dotHeight: 10, // Adjust the height of the indicator dots
+                dotWidth: 10, // Adjust the width of the indicator dots
+                activeDotColor: Colors.white, // Change the active dot color
+                dotColor: Colors.grey, // Change the inactive dot color
+              ),
+            ),
+          )
         ],
       ),
     );
