@@ -24,7 +24,7 @@ class OtpPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Text(
+            const Text(
               "Enter the OTP code sent to your email",
               style: TextStyle(
                 fontSize: 16,
@@ -40,16 +40,12 @@ class OtpPage extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             ElevatedButton(
-              onPressed: () {
-                // Add your "Verify OTP" logic here.
-              },
+              onPressed: () {},
               child: const Text('Verify'),
             ),
             const SizedBox(height: 16),
             TextButton(
-              onPressed: () {
-                // Add your "Resend OTP" logic here.
-              },
+              onPressed: () {},
               child: const Text('Resend OTP'),
             ),
           ],

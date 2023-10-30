@@ -1,4 +1,4 @@
-import 'package:digisat_app/pages/auth/congratulaion_screen.dart';
+import 'package:digisat_app/pages/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class DigiSat extends StatelessWidget {
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
       //primarySwatch: Colors.blue,
-      home: CongratulationPage(),
+      home: SignUpPage(),
     );
   }
 }
