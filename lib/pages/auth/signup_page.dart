@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({super.key});
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
+
+  @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  bool accepted = false;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +28,18 @@ class SignUpPage extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
+              ),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            const Text(
+              "Ready to Begin Your SAT Journey? Sign Up Now ",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w400,
+                color: Colors.black,
+                decoration: TextDecoration.none,
               ),
             ),
             const SizedBox(height: 16),
@@ -48,6 +67,20 @@ class SignUpPage extends StatelessWidget {
                 labelText: 'Confirm Password',
               ),
               obscureText: true,
+            ),
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Checkbox(
+                  value: accepted,
+                  onChanged: (value) {
+                    setState(() {
+                      accepted = value!;
+                    });
+                  },
+                ),
+                Text('I accept all Privacy Policy and Terms'),
+              ],
             ),
             const SizedBox(height: 32),
             ElevatedButton(

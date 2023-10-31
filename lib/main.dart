@@ -14,7 +14,6 @@ class DigiSat extends StatelessWidget {
     return const MaterialApp(
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
-      //primarySwatch: Colors.blue,
       home: SignUpPage(),
     );
   }
