@@ -79,7 +79,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     });
                   },
                 ),
-                Text('I accept all Privacy Policy and Terms'),
+                const Text('I accept all Privacy Policy and Terms'),
               ],
             ),
             const SizedBox(height: 32),
