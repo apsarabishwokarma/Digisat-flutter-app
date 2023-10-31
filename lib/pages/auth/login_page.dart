@@ -33,14 +33,13 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextFormField(
-              decoration: const InputDecoration(
-                labelText: 'Email',
-              ),
+              decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder(), hintText: AutofillHints.email),
             ),
             const SizedBox(height: 16),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Password',
+                border: OutlineInputBorder(),
               ),
               obscureText: true, // to hide the password input
             ),

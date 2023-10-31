@@ -1,4 +1,5 @@
-import 'package:digisat_app/pages/auth/signup_form_screen.dart';
+import 'package:digisat_app/pages/auth/login_page.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class DigiSat extends StatelessWidget {
     return const MaterialApp(
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
-      home: FormPage(),
+      home: LoginPage(),
     );
   }
 }
