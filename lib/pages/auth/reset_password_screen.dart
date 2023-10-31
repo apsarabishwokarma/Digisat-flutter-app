@@ -24,7 +24,7 @@ class ResetPasswordScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Text(
+            const Text(
               "Enter your new password",
               style: TextStyle(
                 fontSize: 16,
