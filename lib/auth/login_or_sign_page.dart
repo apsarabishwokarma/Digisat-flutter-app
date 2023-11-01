@@ -9,11 +9,10 @@ class LoginSignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/LoginSignupScreenbgi.png'),
-        ),
+        image: DecorationImage(image: AssetImage('assets/images/LoginSignupScreenbgi.png'), fit: BoxFit.cover),
       ),
-      child: Column(
+      child: ListView(
+        padding: const EdgeInsets.all(16),
         children: [
           const Spacer(),
           const Text(

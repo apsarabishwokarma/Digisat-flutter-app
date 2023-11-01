@@ -3,12 +3,21 @@ import 'package:digisat_app/auth/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatelessWidget {
-  const ForgetPassword({super.key});
+  const ForgetPassword({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent, // Set background color to transparent
+        elevation: 0, // Remove elevation/shadow
+        shadowColor: Colors.transparent,
+        title: const Text(
+          "Forgot Password",
+          style: TextStyle(color: Colors.black),
+        ),
+        iconTheme: IconThemeData(color: Colors.black), // Set the back button color to black
+      ),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -16,20 +25,14 @@ class ForgetPassword extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
           children: [
-            const Text(
-              "Forgot Password",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            ),
             const SizedBox(height: 16),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Email',
+                border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 32),

@@ -3,7 +3,7 @@ import 'package:digisat_app/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+  const LoginPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
         child: ListView(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
           children: [
             const Text(
               "Login",
@@ -62,9 +62,20 @@ class LoginPage extends StatelessWidget {
               child: const Text('Forgot Password?'),
             ),
             const SizedBox(height: 16),
-            const Divider(),
-            const Text("or"),
-            const Divider(),
+            const Row(
+              children: [
+                Expanded(
+                  child: Divider(),
+                ),
+                Text(
+                  "or",
+                  style: TextStyle(fontWeight: FontWeight.w400),
+                ),
+                Expanded(
+                  child: Divider(),
+                ),
+              ],
+            ),
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {},
@@ -89,7 +100,7 @@ class LoginPage extends StatelessWidget {
                   builder: (context) => const SignUpPage(),
                 ));
               },
-              child: const Text('Don\'t have an account? Sign Up instead'),
+              child: const Text("Don't have an account? Sign Up instead"),
             ),
           ],
         ),

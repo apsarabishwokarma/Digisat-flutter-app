@@ -22,7 +22,8 @@ class _SignUpPageState extends State<SignUpPage> {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
+        child: ListView(
+          padding: const EdgeInsets.all(16),
           children: [
             const Text(
               "Sign Up",
@@ -48,18 +49,21 @@ class _SignUpPageState extends State<SignUpPage> {
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Name',
+                border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 16),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Email',
+                border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 16),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Password',
+                border: OutlineInputBorder(),
               ),
               obscureText: true,
             ),
@@ -67,6 +71,7 @@ class _SignUpPageState extends State<SignUpPage> {
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Confirm Password',
+                border: OutlineInputBorder(),
               ),
               obscureText: true,
             ),
@@ -95,7 +100,20 @@ class _SignUpPageState extends State<SignUpPage> {
               child: const Text('Sign Up'),
             ),
             const SizedBox(height: 16),
-            const Text("or"),
+            const Row(
+              children: [
+                Expanded(
+                  child: Divider(),
+                ),
+                Text(
+                  "or",
+                  style: TextStyle(fontWeight: FontWeight.w400),
+                ),
+                Expanded(
+                  child: Divider(),
+                ),
+              ],
+            ),
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {},
