@@ -1,3 +1,5 @@
+import 'package:digisat_app/pages/auth/forget_password_screen.dart';
+import 'package:digisat_app/pages/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -50,7 +52,12 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to the ForgetPasswordPage when "Forgot Password?" is pressed.
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const ForgetPassword(),
+                ));
+              },
               child: const Text('Forgot Password?'),
             ),
             const SizedBox(height: 16),
@@ -73,8 +80,13 @@ class LoginPage extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             TextButton(
-              onPressed: () {},
-              child: const Text('Donot have an account? Sign Up instead'),
+              onPressed: () {
+                // Navigate to the SignupPage when "Don't have an account? Sign Up instead" is pressed.
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const SignUpPage(),
+                ));
+              },
+              child: const Text('Don\'t have an account? Sign Up instead'),
             ),
           ],
         ),

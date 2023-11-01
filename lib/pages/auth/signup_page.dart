@@ -1,3 +1,5 @@
+import 'package:digisat_app/pages/auth/login_page.dart';
+import 'package:digisat_app/pages/auth/verify_email_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -84,7 +86,12 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 32),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to the VerifyEmailPage when "Sign Up" is pressed.
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => VerifyEmail(),
+                ));
+              },
               child: const Text('Sign Up'),
             ),
             const SizedBox(height: 16),
@@ -107,7 +114,12 @@ class _SignUpPageState extends State<SignUpPage> {
             ),
             const SizedBox(height: 16),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                // Navigate to the LoginPage when "Already have an account? Log in" is pressed.
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const LoginPage(),
+                ));
+              },
               child: const Text("Already have an account? Log in"),
             ),
           ],

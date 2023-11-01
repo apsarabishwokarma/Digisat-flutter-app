@@ -1,5 +1,4 @@
-import 'package:digisat_app/pages/auth/login_page.dart';
-
+import 'package:digisat_app/pages/auth/forget_password_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +14,7 @@ class DigiSat extends StatelessWidget {
     return const MaterialApp(
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: ForgetPassword(),
     );
   }
 }

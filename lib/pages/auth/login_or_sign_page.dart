@@ -1,3 +1,5 @@
+import 'package:digisat_app/pages/auth/login_page.dart';
+import 'package:digisat_app/pages/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginSignUpPage extends StatelessWidget {
@@ -31,7 +33,10 @@ class LoginSignUpPage extends StatelessWidget {
           const Spacer(),
           ElevatedButton(
             onPressed: () {
-              // Add login logic here.
+              // Navigate to the LoginPage when the Login button is pressed.
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const LoginPage(),
+              ));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.deepPurple,
@@ -43,7 +48,10 @@ class LoginSignUpPage extends StatelessWidget {
             //width: double.maxFinite,
             child: ElevatedButton(
               onPressed: () {
-                // Add your signup logic here.
+                // Navigate to the SignupPage when the Signup button is pressed.
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const SignUpPage(),
+                ));
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blueAccent,
