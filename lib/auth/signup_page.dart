@@ -1,5 +1,5 @@
-import 'package:digisat_app/pages/auth/login_page.dart';
-import 'package:digisat_app/pages/auth/verify_email_screen.dart';
+import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/auth/verify_email_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPage extends StatefulWidget {

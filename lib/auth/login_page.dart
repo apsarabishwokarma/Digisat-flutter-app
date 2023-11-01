@@ -1,5 +1,5 @@
-import 'package:digisat_app/pages/auth/forget_password_screen.dart';
-import 'package:digisat_app/pages/auth/signup_page.dart';
+import 'package:digisat_app/auth/forget_password_screen.dart';
+import 'package:digisat_app/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,7 +15,8 @@ class LoginPage extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Column(
+        child: ListView(
+          padding: EdgeInsets.all(16),
           children: [
             const Text(
               "Login",
@@ -61,12 +62,14 @@ class LoginPage extends StatelessWidget {
               child: const Text('Forgot Password?'),
             ),
             const SizedBox(height: 16),
+            const Divider(),
             const Text("or"),
+            const Divider(),
             const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
+                backgroundColor: Colors.purple[900],
               ),
               child: const Text('Continue with Google'),
             ),

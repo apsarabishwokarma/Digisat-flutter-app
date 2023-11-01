@@ -1,5 +1,5 @@
-import 'package:digisat_app/pages/auth/login_page.dart';
-import 'package:digisat_app/pages/auth/signup_page.dart';
+import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginSignUpPage extends StatelessWidget {

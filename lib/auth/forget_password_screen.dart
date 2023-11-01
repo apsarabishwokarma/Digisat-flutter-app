@@ -1,5 +1,5 @@
-import 'package:digisat_app/pages/auth/login_page.dart';
-import 'package:digisat_app/pages/auth/otp_screen.dart';
+import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/auth/otp_screen.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPassword extends StatelessWidget {
@@ -8,6 +8,7 @@ class ForgetPassword extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(

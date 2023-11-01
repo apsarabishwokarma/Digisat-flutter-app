@@ -1,6 +1,6 @@
-import 'package:digisat_app/pages/splash_screen/splash_page_1.dart';
-import 'package:digisat_app/pages/splash_screen/splash_page_2.dart';
-import 'package:digisat_app/pages/splash_screen/splash_page_3.dart';
+import 'package:digisat_app/splash_screen/splash_page_1.dart';
+import 'package:digisat_app/splash_screen/splash_page_2.dart';
+import 'package:digisat_app/splash_screen/splash_page_3.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
