@@ -89,7 +89,7 @@ class _SignUpPageState extends State<SignUpPage> {
               onPressed: () {
                 // Navigate to the VerifyEmailPage when "Sign Up" is pressed.
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => VerifyEmail(),
+                  builder: (context) => const VerifyEmail(),
                 ));
               },
               child: const Text('Sign Up'),
