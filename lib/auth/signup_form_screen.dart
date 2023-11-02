@@ -90,10 +90,7 @@ class _FormPageState extends State<FormPage> {
               const SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // The form is valid, and you can process the data.
-                    // Typically, you'd submit the data to a server or perform other actions here.
-                  }
+                  if (_formKey.currentState!.validate()) {}
                 },
                 child: const Text('Submit'),
               ),

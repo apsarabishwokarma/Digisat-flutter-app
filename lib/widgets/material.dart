@@ -8,8 +8,8 @@ const MaterialColor violet = MaterialColor(
     200: Color(0xFFA97AFF), // Shade 200
     300: Color(0xFF8A4EFF), // Shade 300
     400: Color(0xFF6C21FF), // Shade 400
-    500: Color(0xFF8A2BE2), // Primary shade 500
-    600: Color(0xFF5D00E6), // Shade 600
+    500: Color(0xFF8A2BE2), // Shade 500
+    600: Color(0xFF5D00E6), // primary Shade 600
     700: Color(0xFF4A00B4), // Shade 700
     800: Color(0xFF350081), // Shade 800
     900: Color(0xFF23004F), // Shade 900
