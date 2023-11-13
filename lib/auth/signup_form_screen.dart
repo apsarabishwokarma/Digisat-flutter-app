@@ -11,7 +11,6 @@ class _FormPageState extends State<FormPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   String? _selectedCountry;
   String? _selectedGender;
-
   final List<String> countries = ['Nepal', 'USA', 'UK'];
   final List<String> genders = ['Male', 'Female', 'Other'];
 
@@ -19,7 +18,14 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('User Details Form'),
+        backgroundColor: Colors.transparent, // Set background color to transparent
+        elevation: 0, // Remove elevation/shadow
+        shadowColor: Colors.transparent,
+
+        title: const Text(
+          'User Details Form',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -43,7 +49,10 @@ class _FormPageState extends State<FormPage> {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email address';
                   }
-
+                  // Email regex validation
+                  if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").hasMatch(value)) {
+                    return 'Please enter a valid email address';
+                  }
                   return null;
                 },
               ),

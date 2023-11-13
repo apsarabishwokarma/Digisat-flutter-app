@@ -1,4 +1,4 @@
-import 'package:digisat_app/auth/signup_form_screen.dart';
+import 'package:digisat_app/profile_setting/about_digisat.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class DigiSat extends StatelessWidget {
     return MaterialApp(
         title: 'DigiSat',
         debugShowCheckedModeBanner: false,
-        home: const FormPage(),
+        home: const AboutDigiSat(),
         theme: ThemeData(
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
