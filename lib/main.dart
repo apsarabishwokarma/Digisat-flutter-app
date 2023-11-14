@@ -1,4 +1,4 @@
-import 'package:digisat_app/profile_setting/about_digisat.dart';
+import 'package:digisat_app/profile_setting/notification_setting.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class DigiSat extends StatelessWidget {
     return MaterialApp(
         title: 'DigiSat',
         debugShowCheckedModeBanner: false,
-        home: const AboutDigiSat(),
+        home: const NotificationSettings(),
         theme: ThemeData(
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(

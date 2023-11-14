@@ -15,42 +15,43 @@ class ReportIssue extends StatelessWidget {
           },
         ),
       ),
-      body: Padding(
+      body: Container(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Text(
-              "Describe the issue",
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-              ),
-            ),
             const SizedBox(height: 16),
             TextFormField(
               decoration: const InputDecoration(
-                labelText: 'Report Issue',
+                labelText: 'Issue Details',
                 border: OutlineInputBorder(),
               ),
-              maxLines: 5,
+              maxLines: 4, // Allowing multiple lines for issue details
             ),
             const SizedBox(height: 32),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ElevatedButton(
-                  onPressed: () {
-                    // Add your "Cancel" logic here.
-                  },
-                  child: const Text('Cancel'),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Add your "Cancel" logic here.
+                      Navigator.pop(context); // Close the screen on cancel
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey, // Set button color to grey for cancel
+                    ),
+                    child: const Text('Cancel'),
+                  ),
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    // Add your "Report" logic here.
-                  },
-                  child: const Text('Report'),
+                const SizedBox(width: 16), // Add some space between buttons
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // Add your "Report" logic here.
+                      // This is where you might send the issue report or perform related actions.
+                    },
+                    child: const Text('Report'),
+                  ),
                 ),
               ],
             ),
