@@ -7,26 +7,31 @@ class SplashPage1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        //Image.asset('assets/images/SplashScreen.png'),
         image: DecorationImage(
           image: AssetImage('assets/images/SplashScreen.png'),
           fit: BoxFit.cover,
         ),
       ),
       child: SafeArea(
-        child: Column(
-          children: [
-            Image.asset(
-              'assets/images/logo.png',
-              height: 250,
-              alignment: Alignment.center,
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              "DIGISAT",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600, color: Colors.white),
-            ),
-          ],
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/images/logo.png',
+                height: 200,
+                alignment: Alignment.center,
+              ),
+              const Text(
+                "DIGISAT",
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

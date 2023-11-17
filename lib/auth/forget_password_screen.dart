@@ -50,7 +50,7 @@ class ForgetPassword extends StatelessWidget {
               onPressed: () {
                 // Navigate to the LoginPage when "Remembered your password? Log in" is pressed.
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const LoginPage(),
+                  builder: (context) => LoginPage(),
                 ));
               },
               child: const Text("Remembered your password? Log in"),

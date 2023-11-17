@@ -7,13 +7,21 @@ class AboutDigiSat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('DigiSAT'),
+        backgroundColor: Colors.transparent, // Set background color to transparent
+        elevation: 0, // Remove elevation/shadow
+        shadowColor: Colors.transparent,
+        title: const Text(
+          "About Digisat",
+          style: TextStyle(color: Colors.black),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
           onPressed: () {
             Navigator.pop(context);
           },
         ),
+        //iconTheme: const IconThemeData(color: Colors.black), // Set the back button color to black
       ),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),
@@ -31,7 +39,7 @@ class AboutDigiSat extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'For more knowledge, check this out: What is SAT – Know all about SAT (careers360.com)',
+              'For more knowledge, check this out: What is SAT – Know all about SAT (SAT.com)',
               style: TextStyle(fontSize: 16.0, color: Colors.blue),
             ),
             SizedBox(height: 16.0),

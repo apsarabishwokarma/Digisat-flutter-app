@@ -7,9 +7,13 @@ class ReportIssue extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        shadowColor: Colors.transparent,
         title: const Text("Report Issue"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
           onPressed: () {
             Navigator.pop(context);
           },
@@ -38,18 +42,15 @@ class ReportIssue extends StatelessWidget {
                       Navigator.pop(context); // Close the screen on cancel
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.grey, // Set button color to grey for cancel
+                      backgroundColor: Colors.grey,
                     ),
                     child: const Text('Cancel'),
                   ),
                 ),
-                const SizedBox(width: 16), // Add some space between buttons
+                const SizedBox(width: 16),
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {
-                      // Add your "Report" logic here.
-                      // This is where you might send the issue report or perform related actions.
-                    },
+                    onPressed: () {},
                     child: const Text('Report'),
                   ),
                 ),

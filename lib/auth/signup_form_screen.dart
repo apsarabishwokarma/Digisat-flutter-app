@@ -23,8 +23,15 @@ class _FormPageState extends State<FormPage> {
         shadowColor: Colors.transparent,
 
         title: const Text(
-          'User Details Form',
+          'Fill Your Details',
           style: TextStyle(color: Colors.black),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
       body: Padding(

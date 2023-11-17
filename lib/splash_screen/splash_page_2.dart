@@ -1,7 +1,15 @@
+import 'package:digisat_app/auth/login_or_sign_page.dart';
 import 'package:flutter/material.dart';
 
 class SplashPage2 extends StatelessWidget {
-  const SplashPage2({Key? key}) : super(key: key);
+  final PageController pageController;
+  final VoidCallback onNextPressed;
+
+  const SplashPage2({
+    Key? key,
+    required this.pageController,
+    required this.onNextPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,18 +26,29 @@ class SplashPage2 extends StatelessWidget {
         SafeArea(
           child: Column(
             children: [
-              const Spacer(),
-              const Align(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  "Skip",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.white,
+              Align(
+                alignment: Alignment.topRight,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LoginSignUpPage()),
+                    );
+                  },
+                  child: const Padding(
+                    padding: EdgeInsets.all(16.0),
+                    child: Text(
+                      "Skip",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                      ),
+                    ),
                   ),
                 ),
               ),
+              const Spacer(),
               Image.asset(
                 'assets/images/splashimage2.png',
                 height: 250,
@@ -48,15 +67,16 @@ class SplashPage2 extends StatelessWidget {
             ],
           ),
         ),
-        const Positioned(
+        Positioned(
           bottom: 30,
           right: 16,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Icon(
-                Icons.arrow_forward,
+              IconButton(
                 color: Colors.white,
+                icon: const Icon(Icons.arrow_forward),
+                onPressed: () {},
               ),
             ],
           ),

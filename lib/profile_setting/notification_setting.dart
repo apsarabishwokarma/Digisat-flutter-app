@@ -14,9 +14,13 @@ class _NotificationSettingsState extends State<NotificationSettings> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent, // Set background color to transparent
+        elevation: 0, // Remove elevation/shadow
+        shadowColor: Colors.transparent,
         title: const Text("Notification Settings"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
           onPressed: () {
             Navigator.pop(context);
           },
@@ -30,7 +34,7 @@ class _NotificationSettingsState extends State<NotificationSettings> {
             const SizedBox(height: 16),
             Text(
               'Enable Notifications',
-              style: Theme.of(context).textTheme.headline6,
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 8),
             Switch(
