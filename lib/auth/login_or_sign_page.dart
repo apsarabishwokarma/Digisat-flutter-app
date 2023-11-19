@@ -54,7 +54,12 @@ class LoginSignUpPage extends StatelessWidget {
                 ));
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blueAccent,
+                backgroundColor: Colors.white,
+                elevation: 0,
+                side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(6), // Border radius
+                ),
               ),
               child: const Text(
                 "Signup",

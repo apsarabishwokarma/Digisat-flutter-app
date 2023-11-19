@@ -114,53 +114,47 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
-
-                  //     border-radius: 6px,
-                  //  border: 1px solid var(--slate-100, #F1F5F9);
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.add_box_rounded),
-                    SizedBox(width: 10),
-                    Text('Continue with Google'),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              // ElevatedButton(
-              //   onPressed: () {},
-              //   style: ElevatedButton.styleFrom(
-              //     backgroundColor: violet[600],
-              //   ),
-              //   child: const Row(
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Icon(Icons.access_alarm),
-              //       SizedBox(width: 10),
-              //       Text('Continue with Apple ID'),
-              //     ],
-              //   ),
-              // ),
-              OutlinedButton(
-                onPressed: () {},
-                style: OutlinedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  side: BorderSide(width: 1, color: Colors.black), // 1px border
+                  elevation: 0,
+                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(6), // Border radius
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.add_box_rounded),
+                    Icon(
+                      Icons.add_box_rounded,
+                      color: Colors.black,
+                    ),
                     SizedBox(width: 10),
-                    Text('Continue with Google'),
+                    Text(
+                      'Continue with Google',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ],
                 ),
               ),
-
+              const SizedBox(height: 16),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6), // Border radius
+                  ),
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.access_alarm, color: Colors.black),
+                    SizedBox(width: 10),
+                    Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
+                  ],
+                ),
+              ),
               const SizedBox(height: 16),
               TextButton(
                 onPressed: () {

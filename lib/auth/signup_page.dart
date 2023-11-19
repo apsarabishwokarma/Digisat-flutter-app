@@ -159,17 +159,47 @@ class _SignUpPageState extends State<SignUpPage> {
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6), // Border radius
+                  ),
                 ),
-                child: const Text('Continue with Google'),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.add_box_rounded,
+                      color: Colors.black,
+                    ),
+                    SizedBox(width: 10),
+                    Text(
+                      'Continue with Google',
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
               const SizedBox(height: 16),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
+                  backgroundColor: Colors.white,
+                  elevation: 0,
+                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6), // Border radius
+                  ),
                 ),
-                child: const Text('Continue with Apple ID'),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.access_alarm, color: Colors.black),
+                    SizedBox(width: 10),
+                    Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
+                  ],
+                ),
               ),
               const SizedBox(height: 16),
               TextButton(

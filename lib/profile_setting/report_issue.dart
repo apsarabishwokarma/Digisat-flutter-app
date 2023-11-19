@@ -38,7 +38,6 @@ class ReportIssue extends StatelessWidget {
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {
-                      // Add your "Cancel" logic here.
                       Navigator.pop(context); // Close the screen on cancel
                     },
                     style: ElevatedButton.styleFrom(
