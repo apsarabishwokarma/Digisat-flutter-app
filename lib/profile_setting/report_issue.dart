@@ -10,7 +10,10 @@ class ReportIssue extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         shadowColor: Colors.transparent,
-        title: const Text("Report Issue"),
+        title: const Text(
+          "Report Issue",
+          style: TextStyle(color: Colors.black),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           color: Colors.black,

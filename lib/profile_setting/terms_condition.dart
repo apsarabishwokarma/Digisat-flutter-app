@@ -7,10 +7,13 @@ class TermsCondition extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Set background color to transparent
-        elevation: 0, // Remove elevation/shadow
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         shadowColor: Colors.transparent,
-        title: const Text('Terms & Conditions'),
+        title: const Text(
+          'Terms & Conditions',
+          style: TextStyle(color: Colors.black),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           color: Colors.black,

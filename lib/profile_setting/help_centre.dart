@@ -27,7 +27,8 @@ class FAQs extends StatelessWidget {
         children: [
           FAQItem(
             question: 'What is SAT?',
-            answer: 'Flutter is an open-source UI software development toolkit created by Google.',
+            answer:
+                'SAT: The SAT, which stands for Scholastic Assessment Test, is like a special test that high school students take when they\'re thinking about going to college. It helps colleges figure out if students are ready for the kind of learning they\'ll do in college classes.',
           ),
           const SizedBox(height: 16.0),
           FAQItem(

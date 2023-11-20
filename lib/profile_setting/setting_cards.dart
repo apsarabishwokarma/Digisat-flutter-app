@@ -1,4 +1,13 @@
+import 'package:digisat_app/auth/login_or_sign_page.dart';
 import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/profile_setting/about_digisat.dart';
+import 'package:digisat_app/profile_setting/about_sat.dart';
+import 'package:digisat_app/profile_setting/change_password.dart';
+import 'package:digisat_app/profile_setting/help_centre.dart';
+import 'package:digisat_app/profile_setting/invite_friends.dart';
+import 'package:digisat_app/profile_setting/notification_setting.dart';
+import 'package:digisat_app/profile_setting/report_issue.dart';
+import 'package:digisat_app/profile_setting/terms_condition.dart';
 import 'package:flutter/material.dart';
 
 class SettingCard extends StatelessWidget {
@@ -23,60 +32,61 @@ class SettingCard extends StatelessWidget {
           },
         ),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(1),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               ProfileCard(
                 icon: Icons.credit_card,
                 title: 'Payment Method',
+                page: LoginPage(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.file_open,
                 title: 'About SAT',
+                page: AboutSat(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.file_open,
                 title: 'About DigiSAT',
+                page: AboutDigiSat(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.key_outlined,
                 title: 'Change Password',
+                page: ChangePassword(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.notifications,
                 title: 'Notifications',
+                page: NotificationSettings(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.shield,
                 title: 'Terms & Condition',
+                page: TermsCondition(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.question_answer_rounded,
                 title: 'FAQs',
+                page: FAQs(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.dangerous_rounded,
                 title: 'Report Issue',
+                page: ReportIssue(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.share,
                 title: 'Invite Friends',
+                page: InviteFriends(),
               ),
-              SizedBox(height: 12),
-              ProfileCard(
+              const ProfileCard(
                 icon: Icons.logout,
                 title: 'Log Out',
+                page: LoginSignUpPage(),
               ),
             ],
           ),
@@ -89,8 +99,9 @@ class SettingCard extends StatelessWidget {
 class ProfileCard extends StatelessWidget {
   final IconData icon;
   final String title;
+  final Widget page;
 
-  const ProfileCard({required this.icon, required this.title});
+  const ProfileCard({required this.icon, required this.title, required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -106,7 +117,7 @@ class ProfileCard extends StatelessWidget {
               icon: const Icon(Icons.arrow_right),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => LoginPage(),
+                  builder: (context) => page,
                 ));
               },
             ),
