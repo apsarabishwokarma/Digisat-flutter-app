@@ -1,4 +1,4 @@
-import 'package:digisat_app/profile_setting/invite_friends.dart';
+import 'package:digisat_app/profile_setting/setting_cards.dart';
 import 'package:digisat_app/widgets/material.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class DigiSat extends StatelessWidget {
     return MaterialApp(
         title: 'DigiSat',
         debugShowCheckedModeBanner: false,
-        home: const InviteFriends(),
+        home: const SettingCard(),
         theme: ThemeData(
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(

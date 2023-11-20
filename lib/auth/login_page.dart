@@ -1,7 +1,7 @@
 import 'package:digisat_app/auth/forget_password_screen.dart';
 import 'package:digisat_app/auth/signup_page.dart';
 import 'package:digisat_app/pages/home_page.dart';
-import 'package:digisat_app/widgets/material.dart';
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {

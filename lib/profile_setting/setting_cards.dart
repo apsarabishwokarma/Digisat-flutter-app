@@ -1,3 +1,4 @@
+import 'package:digisat_app/auth/login_page.dart';
 import 'package:flutter/material.dart';
 
 class SettingCard extends StatelessWidget {
@@ -103,7 +104,11 @@ class ProfileCard extends StatelessWidget {
           children: [
             IconButton(
               icon: const Icon(Icons.arrow_right),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => LoginPage(),
+                ));
+              },
             ),
           ],
         ),
