@@ -23,12 +23,13 @@ class LoginPage extends StatelessWidget {
           child: ListView(
             padding: const EdgeInsets.all(16),
             children: [
+              const SizedBox(height: 50),
               const Text(
                 "Login",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black, decoration: TextDecoration.none),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black, decoration: TextDecoration.none),
               ),
               const SizedBox(
-                height: 16,
+                height: 17,
               ),
               const Text(
                 "Welcome back! Access your SAT preparation journey ",
@@ -65,7 +66,7 @@ class LoginPage extends StatelessWidget {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your password';
                   }
-                  // You can add more password validation logic if needed
+
                   return null;
                 },
               ),
@@ -82,90 +83,87 @@ class LoginPage extends StatelessWidget {
                 },
                 child: const Text('Login'),
               ),
-              const SizedBox(height: 16),
-              TextButton(
-                onPressed: () {
-                  // Navigate to the ForgetPasswordPage when "Forgot Password?" is pressed.
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const ForgetPassword(),
-                  ));
-                },
-                child: const Text(
-                  'Forgot Password?',
-                  textAlign: TextAlign.left,
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Row(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Expanded(
-                    child: Divider(),
-                  ),
-                  Text(
-                    "or",
-                    style: TextStyle(fontWeight: FontWeight.w400),
-                  ),
-                  Expanded(
-                    child: Divider(),
+                  TextButton(
+                    onPressed: () {
+                      // Navigate to the ForgetPasswordPage when "Forgot Password?" is pressed.
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ForgetPassword(),
+                      ));
+                    },
+                    child: const Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 20),
+              const Text(
+                "or",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  side: const BorderSide(width: 1, color: Colors.grey),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6), // Border radius
+                    borderRadius: BorderRadius.circular(6),
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      icon: const Icon(
-                        FontAwesomeIcons.google,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {},
+                    Icon(
+                      FontAwesomeIcons.google,
+                      color: Color.fromRGBO(228, 25, 25, 1),
                     ),
-                    const SizedBox(width: 10),
-                    const Text(
+                    SizedBox(width: 8),
+                    Text(
                       'Continue with Google',
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  side: const BorderSide(width: 1, color: Colors.grey),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6), // Border radius
+                    borderRadius: BorderRadius.circular(6),
                   ),
                 ),
-                child: Row(
+                child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton(
-                      icon: const Icon(
-                        FontAwesomeIcons.apple,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {},
+                    Icon(
+                      FontAwesomeIcons.apple,
+                      color: Colors.black,
                     ),
-                    const SizedBox(width: 10),
-                    const Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
+                    SizedBox(width: 8),
+                    Text(
+                      'Continue with Apple ID',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 22),
               TextButton(
                 onPressed: () {
                   // Navigate to the SignupPage when "Don't have an account? Sign Up instead" is pressed.
@@ -173,7 +171,10 @@ class LoginPage extends StatelessWidget {
                     builder: (context) => const SignUpPage(),
                   ));
                 },
-                child: const Text("Don't have an account? Sign Up instead"),
+                child: const Text(
+                  "Don't have an account? Sign Up instead",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ],
           ),

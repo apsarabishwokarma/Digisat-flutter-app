@@ -114,7 +114,7 @@ class ProfileCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             IconButton(
-              icon: const Icon(Icons.arrow_right),
+              icon: const Icon(Icons.arrow_forward_ios_rounded),
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => page,

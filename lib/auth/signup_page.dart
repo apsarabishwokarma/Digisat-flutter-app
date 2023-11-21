@@ -1,5 +1,6 @@
 import 'package:digisat_app/auth/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'verify_email_screen.dart';
 
 class SignUpPage extends StatefulWidget {
@@ -33,8 +34,8 @@ class _SignUpPageState extends State<SignUpPage> {
               const Text(
                 "Sign Up",
                 style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
                   color: Colors.black,
                 ),
               ),
@@ -141,75 +142,80 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: const Text('Sign Up'),
               ),
               const SizedBox(height: 16),
-              const Row(
-                children: [
-                  Expanded(
-                    child: Divider(),
-                  ),
-                  Text(
-                    "or",
-                    style: TextStyle(fontWeight: FontWeight.w400),
-                  ),
-                  Expanded(
-                    child: Divider(),
-                  ),
-                ],
+              const Text(
+                "or",
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  side: const BorderSide(width: 1, color: Colors.grey),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6), // Border radius
+                    borderRadius: BorderRadius.circular(6),
                   ),
                 ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Icon(
-                      Icons.add_box_rounded,
-                      color: Colors.black,
+                      FontAwesomeIcons.google,
+                      color: Color.fromRGBO(228, 25, 25, 1),
                     ),
-                    SizedBox(width: 10),
+                    SizedBox(width: 8),
                     Text(
                       'Continue with Google',
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 14),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   elevation: 0,
-                  side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                  side: const BorderSide(width: 1, color: Colors.grey),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6), // Border radius
+                    borderRadius: BorderRadius.circular(6),
                   ),
                 ),
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.access_alarm, color: Colors.black),
-                    SizedBox(width: 10),
-                    Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
+                    Icon(
+                      FontAwesomeIcons.apple,
+                      color: Colors.black,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      'Continue with Apple ID',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 22),
               TextButton(
                 onPressed: () {
-                  // Navigate to the LoginPage when "Already have an account? Log in" is pressed.
+                  // Navigate to the LoginPage when "already have an account? Login instead" is pressed.
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => LoginPage(),
+                    builder: (context) => const SignUpPage(),
                   ));
                 },
-                child: const Text("Already have an account? Log in"),
+                child: const Text(
+                  "Already have an account? Login instead",
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
             ],
           ),

@@ -41,16 +41,17 @@ class SplashPage3 extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 135),
               Image.asset(
                 'assets/images/splashimage3.png',
                 height: 250,
               ),
-              const Spacer(),
+              const SizedBox(height: 35),
               const Text(
                 "Prepare Smarter, Score Higher",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontWeight: FontWeight.w400,
+                  fontWeight: FontWeight.w600,
                   fontSize: 16,
                   color: Colors.white,
                 ),

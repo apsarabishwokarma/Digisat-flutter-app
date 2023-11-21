@@ -19,7 +19,7 @@ class SplashPage1 extends StatelessWidget {
             children: [
               Image.asset(
                 'assets/images/logo.png',
-                height: 200,
+                height: 150,
                 alignment: Alignment.center,
               ),
               const Text(
