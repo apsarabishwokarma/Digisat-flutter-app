@@ -1,8 +1,9 @@
 import 'package:digisat_app/auth/forget_password_screen.dart';
 import 'package:digisat_app/auth/signup_page.dart';
 import 'package:digisat_app/pages/home_page.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -120,15 +121,18 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6), // Border radius
                   ),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      Icons.add_box_rounded,
-                      color: Colors.black,
+                    IconButton(
+                      icon: const Icon(
+                        FontAwesomeIcons.google,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {},
                     ),
-                    SizedBox(width: 10),
-                    Text(
+                    const SizedBox(width: 10),
+                    const Text(
                       'Continue with Google',
                       style: TextStyle(color: Colors.black),
                     ),
@@ -146,12 +150,18 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6), // Border radius
                   ),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.access_alarm, color: Colors.black),
-                    SizedBox(width: 10),
-                    Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
+                    IconButton(
+                      icon: const Icon(
+                        FontAwesomeIcons.apple,
+                        color: Colors.black,
+                      ),
+                      onPressed: () {},
+                    ),
+                    const SizedBox(width: 10),
+                    const Text('Continue with Apple ID', style: TextStyle(color: Colors.black)),
                   ],
                 ),
               ),
