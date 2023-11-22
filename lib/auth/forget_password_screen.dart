@@ -9,14 +9,14 @@ class ForgetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Set background color to transparent
+        backgroundColor: Colors.transparent,
         elevation: 0, // Remove elevation/shadow
         shadowColor: Colors.transparent,
         title: const Text(
           "Forgot Password",
           style: TextStyle(color: Colors.black),
         ),
-        iconTheme: IconThemeData(color: Colors.black), // Set the back button color to black
+        iconTheme: const IconThemeData(color: Colors.black),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -28,14 +28,19 @@ class ForgetPassword extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            const SizedBox(height: 16),
+            const SizedBox(height: 15),
+            const Text(
+              "Please enter your email address. We will send a password reset link to your email.",
+              style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
+            ),
+            const SizedBox(height: 50),
             TextFormField(
               decoration: const InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
             ),
-            const SizedBox(height: 32),
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 // Navigate to the OTP screen when "Reset Password" is pressed.
@@ -43,7 +48,7 @@ class ForgetPassword extends StatelessWidget {
                   builder: (context) => const OtpPage(),
                 ));
               },
-              child: const Text('Reset Password'),
+              child: const Text('Submit'),
             ),
             const SizedBox(height: 16),
             TextButton(
@@ -53,7 +58,10 @@ class ForgetPassword extends StatelessWidget {
                   builder: (context) => LoginPage(),
                 ));
               },
-              child: const Text("Remembered your password? Log in"),
+              child: const Text(
+                "Remembered your password? Log in",
+                style: TextStyle(color: Colors.black),
+              ),
             ),
           ],
         ),

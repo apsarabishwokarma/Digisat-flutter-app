@@ -2,7 +2,7 @@
 import 'package:digisat_app/splash_screen/splash_page.dart';
 import 'package:digisat_app/widgets/material.dart';
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const DigiSat());
@@ -19,7 +19,7 @@ class DigiSat extends StatelessWidget {
         //home: const SettingCard(),
 
         theme: ThemeData(
-          //textTheme: GoogleFonts.openSansTextTheme(),
+          textTheme: GoogleFonts.interTextTheme(),
           elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
               backgroundColor: violet[600],

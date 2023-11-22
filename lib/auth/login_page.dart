@@ -3,7 +3,7 @@ import 'package:digisat_app/auth/signup_page.dart';
 import 'package:digisat_app/pages/home_page.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
               const Text(
                 "Login",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black, decoration: TextDecoration.none),
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black, decoration: TextDecoration.none),
               ),
               const SizedBox(
                 height: 17,
@@ -119,15 +119,20 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(6),
                   ),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      FontAwesomeIcons.google,
-                      color: Color.fromRGBO(228, 25, 25, 1),
+                    // Icon(
+                    //   FontAwesomeIcons.google,
+                    //   color: Color.fromRGBO(228, 25, 25, 1),
+                    // ),
+                    Image.asset(
+                      'assets/icons/google.png',
+                      height: 35,
+                      width: 25,
                     ),
-                    SizedBox(width: 8),
-                    Text(
+                    const SizedBox(width: 8),
+                    const Text(
                       'Continue with Google',
                       style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
                     ),

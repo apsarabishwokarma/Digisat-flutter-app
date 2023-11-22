@@ -209,7 +209,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 onPressed: () {
                   // Navigate to the LoginPage when "already have an account? Login instead" is pressed.
                   Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const SignUpPage(),
+                    builder: (context) => LoginPage(),
                   ));
                 },
                 child: const Text(

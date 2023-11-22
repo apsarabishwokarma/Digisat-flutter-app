@@ -45,7 +45,6 @@ class LoginSignUpPage extends StatelessWidget {
           ),
           const SizedBox(height: 17),
           SizedBox(
-            //width: double.maxFinite,
             child: ElevatedButton(
               onPressed: () {
                 // Navigate to the SignupPage when the Signup button is pressed.
