@@ -1,9 +1,9 @@
 import 'package:digisat_app/auth/forget_password_screen.dart';
 import 'package:digisat_app/auth/signup_page.dart';
 import 'package:digisat_app/pages/home_page.dart';
+import 'package:digisat_app/widgets/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
@@ -90,11 +90,11 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       // Navigate to the ForgetPasswordPage when "Forgot Password?" is pressed.
                       Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const ForgetPassword(),
+                        builder: (context) => ForgetPassword(),
                       ));
                     },
                     child: const Text(
-                      'Forgot Password?',
+                      'Forgot Password ?',
                       style: TextStyle(color: Colors.black),
                     ),
                   ),
@@ -176,9 +176,21 @@ class LoginPage extends StatelessWidget {
                     builder: (context) => const SignUpPage(),
                   ));
                 },
-                child: const Text(
-                  "Don't have an account? Sign Up instead",
-                  style: TextStyle(color: Colors.black),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Don't have an account? ",
+                    style: const TextStyle(color: Colors.black),
+                    children: [
+                      TextSpan(
+                        text: 'Sign Up ',
+                        style: TextStyle(color: violet[600]),
+                      ),
+                      const TextSpan(
+                        text: 'instead',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

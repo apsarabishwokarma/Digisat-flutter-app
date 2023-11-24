@@ -24,6 +24,7 @@ class SettingCard extends StatelessWidget {
           'Setting',
           style: TextStyle(color: Colors.black),
         ),
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           color: Colors.black,

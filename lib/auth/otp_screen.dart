@@ -1,3 +1,4 @@
+import 'package:digisat_app/auth/reset_password_screen.dart';
 import 'package:flutter/material.dart';
 
 class OtpPage extends StatelessWidget {
@@ -40,7 +41,12 @@ class OtpPage extends StatelessWidget {
             ),
             const SizedBox(height: 32),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
+                );
+              },
               child: const Text('Verify'),
             ),
             const SizedBox(height: 16),

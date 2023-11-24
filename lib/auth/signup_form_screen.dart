@@ -42,7 +42,10 @@ class _FormPageState extends State<FormPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Full Name'),
+                decoration: const InputDecoration(
+                  labelText: 'Full Name',
+                  border: OutlineInputBorder(),
+                ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your full name';
@@ -51,7 +54,7 @@ class _FormPageState extends State<FormPage> {
                 },
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Email'),
+                decoration: const InputDecoration(labelText: 'Email', border: OutlineInputBorder()),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email address';
@@ -64,7 +67,7 @@ class _FormPageState extends State<FormPage> {
                 },
               ),
               TextFormField(
-                decoration: const InputDecoration(labelText: 'Phone Number'),
+                decoration: const InputDecoration(labelText: 'Phone Number', border: OutlineInputBorder()),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your phone number';

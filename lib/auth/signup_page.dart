@@ -1,4 +1,5 @@
 import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/widgets/material.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'verify_email_screen.dart';
@@ -160,15 +161,20 @@ class _SignUpPageState extends State<SignUpPage> {
                     borderRadius: BorderRadius.circular(6),
                   ),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(
-                      FontAwesomeIcons.google,
-                      color: Color.fromRGBO(228, 25, 25, 1),
+                    // Icon(
+                    //   FontAwesomeIcons.google,
+                    //   color: Color.fromRGBO(228, 25, 25, 1),
+                    // ),
+                    Image.asset(
+                      'assets/icons/google.png',
+                      height: 35,
+                      width: 25,
                     ),
-                    SizedBox(width: 8),
-                    Text(
+                    const SizedBox(width: 8),
+                    const Text(
                       'Continue with Google',
                       style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
                     ),
@@ -212,12 +218,24 @@ class _SignUpPageState extends State<SignUpPage> {
                     builder: (context) => LoginPage(),
                   ));
                 },
-                child: const Text(
-                  "Already have an account? Login instead",
-                  style: TextStyle(color: Colors.black),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Already have an account?",
+                    style: const TextStyle(color: Colors.black),
+                    children: [
+                      TextSpan(
+                        text: ' Login ',
+                        style: TextStyle(color: violet[600]),
+                      ),
+                      const TextSpan(
+                        text: 'instead',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ],
+            ], // ),
           ),
         ),
       ),

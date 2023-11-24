@@ -7,8 +7,8 @@ class ChangePassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Set background color to transparent
-        elevation: 0, // Remove elevation/shadow
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         shadowColor: Colors.transparent,
         title: const Text(
           "Change Password",
@@ -33,7 +33,7 @@ class ChangePassword extends StatelessWidget {
                 labelText: 'Old Password',
                 border: OutlineInputBorder(),
               ),
-              obscureText: true, // Hide the password input
+              obscureText: true,
             ),
             const SizedBox(height: 16),
             TextFormField(
@@ -41,7 +41,7 @@ class ChangePassword extends StatelessWidget {
                 labelText: 'New Password',
                 border: OutlineInputBorder(),
               ),
-              obscureText: true, // Hide the password input
+              obscureText: true,
             ),
             const SizedBox(height: 16),
             TextFormField(
@@ -49,13 +49,11 @@ class ChangePassword extends StatelessWidget {
                 labelText: 'Confirm Password',
                 border: OutlineInputBorder(),
               ),
-              obscureText: true, // Hide the password input
+              obscureText: true,
             ),
             const SizedBox(height: 32),
             ElevatedButton(
-              onPressed: () {
-                // Add your "Change Password" logic here.
-              },
+              onPressed: () {},
               child: const Text('Set Password'),
             ),
           ],
