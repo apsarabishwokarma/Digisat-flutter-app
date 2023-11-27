@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 class LoginPage extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
 
+  LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +28,12 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50),
               const Text(
                 "Login",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black, decoration: TextDecoration.none),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  decoration: TextDecoration.none,
+                ),
               ),
               const SizedBox(
                 height: 17,
@@ -42,14 +49,17 @@ class LoginPage extends StatelessWidget {
               ),
               const SizedBox(height: 50),
               TextFormField(
-                decoration:
-                    const InputDecoration(labelText: 'Email', border: OutlineInputBorder(), hintText: AutofillHints.email),
+                decoration: const InputDecoration(
+                    labelText: 'Email',
+                    border: OutlineInputBorder(),
+                    hintText: AutofillHints.email),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
                     return 'Please enter your email address';
                   }
                   // Email regex validation
-                  if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").hasMatch(value)) {
+                  if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+                      .hasMatch(value)) {
                     return 'Please enter a valid email address';
                   }
                   return null;
@@ -130,7 +140,8 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(width: 8),
                     const Text(
                       'Continue with Google',
-                      style: TextStyle(fontWeight: FontWeight.w500, color: Colors.black),
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, color: Colors.black),
                     ),
                   ],
                 ),

@@ -1,7 +1,6 @@
-import 'package:digisat_app/profile_setting/setting_cards.dart';
-import 'package:digisat_app/widgets/material.dart';
+import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/themes/my_themes.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const DigiSat());
@@ -12,19 +11,10 @@ class DigiSat extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'DigiSat',
-        debugShowCheckedModeBanner: false,
-        // home: SplashPage(),
-        home: const SettingCard(),
-        theme: ThemeData(
-          textTheme: GoogleFonts.interTextTheme(),
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: violet[600],
-              fixedSize: const Size(double.infinity, 42),
-              minimumSize: const Size(double.infinity, 42),
-            ),
-          ),
-        ));
+      title: 'DigiSat',
+      debugShowCheckedModeBanner: false,
+      home: LoginPage(),
+      theme: AppTheme.themeData(),
+    );
   }
 }

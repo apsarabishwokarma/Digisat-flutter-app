@@ -3,13 +3,15 @@ import 'package:digisat_app/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginSignUpPage extends StatelessWidget {
-  const LoginSignUpPage({Key? key});
+  const LoginSignUpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        image: DecorationImage(image: AssetImage('assets/images/LoginSignupScreenbgi.png'), fit: BoxFit.cover),
+        image: DecorationImage(
+            image: AssetImage('assets/images/LoginSignupScreenbgi.png'),
+            fit: BoxFit.cover),
       ),
       child: ListView(
         padding: const EdgeInsets.all(16),
@@ -26,7 +28,7 @@ class LoginSignUpPage extends StatelessWidget {
           ),
           const SizedBox(height: 100),
           Image.asset(
-            "assets/Images/loginorsignup.png",
+            "assets/images/loginorsignup.png",
             height: 250,
             width: 250,
           ),
@@ -47,7 +49,7 @@ class LoginSignUpPage extends StatelessWidget {
           SizedBox(
             child: ElevatedButton(
               onPressed: () {
-                // Navigate to the SignupPage when the Signup button is pressed.
+                // Navigate to the SignUpPage when the SignUp button is pressed.
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => const SignUpPage(),
                 ));
@@ -61,7 +63,7 @@ class LoginSignUpPage extends StatelessWidget {
                 ),
               ),
               child: const Text(
-                "Signup",
+                "SignUp",
                 style: TextStyle(color: Colors.black),
               ),
             ),
