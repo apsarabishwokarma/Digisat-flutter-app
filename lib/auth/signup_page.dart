@@ -71,11 +71,14 @@ class _SignUpPageState extends State<SignUpPage> {
                     const InputDecoration(labelText: 'Email', border: OutlineInputBorder(), hintText: AutofillHints.email),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter your email address';
+                    return 'please enter you email address';
                   }
-                  // Email regex validation
                   if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").hasMatch(value)) {
-                    return 'Please enter a valid email address';
+                    return 'please enter  valid email address';
+                  }
+
+                  if (!value.endsWith('gmail.com')) {
+                    return 'Please enter a valid gmail address';
                   }
                   return null;
                 },
@@ -164,10 +167,6 @@ class _SignUpPageState extends State<SignUpPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Icon(
-                    //   FontAwesomeIcons.google,
-                    //   color: Color.fromRGBO(228, 25, 25, 1),
-                    // ),
                     Image.asset(
                       'assets/icons/google.png',
                       height: 35,

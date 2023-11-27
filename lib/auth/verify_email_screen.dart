@@ -1,6 +1,6 @@
+import 'package:digisat_app/auth/login_page.dart';
 import 'package:digisat_app/widgets/material.dart';
 import 'package:flutter/material.dart';
-import 'package:digisat_app/auth/reset_password_screen.dart';
 
 class VerifyEmail extends StatefulWidget {
   const VerifyEmail({Key? key}) : super(key: key);
@@ -92,7 +92,7 @@ class _VerifyEmailState extends State<VerifyEmail> {
                   if (enteredOtp == "1234") {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
+                      MaterialPageRoute(builder: (context) => LoginPage()),
                     );
                   } else {
                     // Handle incorrect OTP logic

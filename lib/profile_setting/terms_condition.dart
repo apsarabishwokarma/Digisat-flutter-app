@@ -12,7 +12,7 @@ class TermsCondition extends StatelessWidget {
         shadowColor: Colors.transparent,
         title: const Text(
           'Terms & Conditions',
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: IconButton(
@@ -28,6 +28,7 @@ class TermsCondition extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            SizedBox(height: 30),
             Text(
               'Welcome to Digisat! Before using our app, please take a moment to review the following terms and conditions.',
               style: TextStyle(fontSize: 16.0),

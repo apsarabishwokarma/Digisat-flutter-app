@@ -12,7 +12,7 @@ class ReportIssue extends StatelessWidget {
         shadowColor: Colors.transparent,
         title: const Text(
           "Report Issue",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         leading: IconButton(
@@ -28,15 +28,15 @@ class ReportIssue extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const SizedBox(height: 16),
+            const SizedBox(height: 40),
             TextFormField(
-              decoration: const InputDecoration(
-                labelText: 'Issue Details',
-                border: OutlineInputBorder(),
-              ),
-              maxLines: 4, // Allowing multiple lines for issue details
-            ),
-            const SizedBox(height: 32),
+                decoration: const InputDecoration(
+                  labelText: 'Issue Description',
+                  border: OutlineInputBorder(),
+                ),
+                maxLines: 10 // Allowing multiple lines for issue details
+                ),
+            const SizedBox(height: 132),
             Row(
               children: [
                 Expanded(

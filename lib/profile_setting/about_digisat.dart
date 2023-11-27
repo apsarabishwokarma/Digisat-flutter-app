@@ -7,8 +7,8 @@ class AboutDigiSat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Set background color to transparent
-        elevation: 0, // Remove elevation/shadow
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         shadowColor: Colors.transparent,
         title: const Text(
           "About Digisat",
@@ -22,7 +22,6 @@ class AboutDigiSat extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        //iconTheme: const IconThemeData(color: Colors.black), // Set the back button color to black
       ),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),

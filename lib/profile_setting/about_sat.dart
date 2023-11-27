@@ -7,8 +7,8 @@ class AboutSat extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent, // Set background color to transparent
-        elevation: 0, // Remove elevation/shadow
+        backgroundColor: Colors.transparent,
+        elevation: 0,
         shadowColor: Colors.transparent,
         title: const Text(
           'About SAT',

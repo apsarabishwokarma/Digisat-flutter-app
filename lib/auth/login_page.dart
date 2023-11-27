@@ -122,10 +122,6 @@ class LoginPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Icon(
-                    //   FontAwesomeIcons.google,
-                    //   color: Color.fromRGBO(228, 25, 25, 1),
-                    // ),
                     Image.asset(
                       'assets/icons/google.png',
                       height: 35,

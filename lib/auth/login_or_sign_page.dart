@@ -55,9 +55,9 @@ class LoginSignUpPage extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
                 elevation: 0,
-                side: const BorderSide(width: 1, color: Colors.grey), // 1px border
+                side: const BorderSide(width: 1, color: Colors.grey),
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(6), // Border radius
+                  borderRadius: BorderRadius.circular(6),
                 ),
               ),
               child: const Text(
