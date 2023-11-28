@@ -25,7 +25,8 @@ class SplashPage3 extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const LoginSignUpPage()),
+                      MaterialPageRoute(
+                          builder: (context) => const LoginSignUpPage()),
                     );
                   },
                   child: const Padding(
@@ -43,7 +44,7 @@ class SplashPage3 extends StatelessWidget {
               ),
               const SizedBox(height: 135),
               Image.asset(
-                'assets/images/splashimage3.png',
+                'assets/images/splashImage3.png',
                 height: 250,
               ),
               const SizedBox(height: 35),
@@ -72,7 +73,8 @@ class SplashPage3 extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const LoginSignUpPage()),
+                    MaterialPageRoute(
+                        builder: (context) => const LoginSignUpPage()),
                   );
                 },
               ),

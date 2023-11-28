@@ -1,4 +1,5 @@
 import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/splash_screen/splash_page.dart';
 import 'package:digisat_app/themes/my_themes.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class DigiSat extends StatelessWidget {
     return MaterialApp(
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      home: SplashPage(),
       theme: AppTheme.themeData(),
     );
   }

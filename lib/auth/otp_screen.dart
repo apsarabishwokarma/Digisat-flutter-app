@@ -1,6 +1,7 @@
-import 'package:digisat_app/widgets/material.dart';
 import 'package:flutter/material.dart';
 import 'package:digisat_app/auth/reset_password_screen.dart';
+
+import '../themes/material.dart';
 
 class OtpPage extends StatefulWidget {
   const OtpPage({Key? key}) : super(key: key);
@@ -87,17 +88,18 @@ class _OtpPageState extends State<OtpPage> {
               const SizedBox(height: 32),
               ElevatedButton(
                 onPressed: () {
-                  // Check if OTP is "1234" and open ResetPasswordScreen
-                  String enteredOtp = "${otpController1.text}${otpController2.text}${otpController3.text}${otpController4.text}";
-                  if (enteredOtp == "1234") {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ResetPasswordScreen()),
-                    );
-                  } else {
-                    // Handle incorrect OTP logic
-                    print("Incorrect OTP. Please try again.");
-                  }
+                  // // Check if OTP is "1234" and open ResetPasswordScreen
+                  // String enteredOtp = "${otpController1.text}${otpController2.text}${otpController3.text}${otpController4.text}";
+                  // if (enteredOtp == "1234") {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ResetPasswordScreen()),
+                  );
+                  // } else {
+                  //   // Handle incorrect OTP logic
+                  //   print("Incorrect OTP. Please try again.");
+                  // }
                 },
                 child: const Text('Verify'),
               ),

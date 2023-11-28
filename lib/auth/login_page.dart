@@ -1,7 +1,8 @@
 import 'package:digisat_app/auth/forget_password_screen.dart';
 import 'package:digisat_app/auth/signup_page.dart';
 import 'package:digisat_app/pages/home_page.dart';
-import 'package:digisat_app/widgets/material.dart';
+import 'package:digisat_app/profile_setting/setting_cards.dart';
+import 'package:digisat_app/themes/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
@@ -54,15 +55,15 @@ class LoginPage extends StatelessWidget {
                     border: OutlineInputBorder(),
                     hintText: AutofillHints.email),
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your email address';
-                  }
+                  // if (value == null || value.isEmpty) {
+                  //   return 'Please enter your email address';
+                  // }
                   // Email regex validation
-                  if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
-                      .hasMatch(value)) {
-                    return 'Please enter a valid email address';
-                  }
-                  return null;
+                  // if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+                  //     .hasMatch(value)) {
+                  //   return 'Please enter a valid email address';
+                  // }
+                  // return null;
                 },
               ),
               const SizedBox(height: 29),
@@ -72,24 +73,23 @@ class LoginPage extends StatelessWidget {
                   border: OutlineInputBorder(),
                 ),
                 obscureText: true,
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'Please enter your password';
-                  }
+                // validator: (value) {
+                //   if (value == null || value.isEmpty) {
+                //     return 'Please enter your password';
+                //   }
 
-                  return null;
-                },
+                //   return null;
+                // },
               ),
               const SizedBox(height: 50),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    // If the form is valid, navigate to the HomePage
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HomePage()),
-                    );
-                  }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SettingCard()),
+                  );
+                  // }
                 },
                 child: const Text('Login'),
               ),
@@ -98,7 +98,6 @@ class LoginPage extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      // Navigate to the ForgetPasswordPage when "Forgot Password?" is pressed.
                       Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => ForgetPassword(),
                       ));
@@ -178,7 +177,6 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 22),
               TextButton(
                 onPressed: () {
-                  // Navigate to the SignupPage when "Don't have an account? Sign Up instead" is pressed.
                   Navigator.of(context).push(MaterialPageRoute(
                     builder: (context) => const SignUpPage(),
                   ));

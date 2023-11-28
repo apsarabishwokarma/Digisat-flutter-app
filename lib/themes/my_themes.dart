@@ -1,5 +1,5 @@
 import 'package:digisat_app/themes/my_colors.dart';
-import 'package:digisat_app/widgets/material.dart';
+import 'package:digisat_app/themes/material.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,11 +12,14 @@ class AppTheme {
         ),
         scaffoldBackgroundColor: Colors.white,
         textTheme: GoogleFonts.interTextTheme(),
+        
+
+        
         //outline button theme. can be used to change the default properties of outline button
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
             side: MaterialStateProperty.all<BorderSide>(
-                BorderSide(color: violet.shade400)),
+                BorderSide(color: violet.shade200)),
           ),
         ),
         hintColor: MyColors.mainBlack.withOpacity(0.5),
@@ -41,7 +44,7 @@ class AppTheme {
 
           //When the input field is enabled
           enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: violet[400]!, width: 1.5),
+            borderSide: BorderSide(color: violet[100]!, width: 1.5),
             borderRadius: BorderRadius.circular(8),
           ),
           // When the input field is focused
@@ -51,7 +54,7 @@ class AppTheme {
           ),
           // border for input fields.
           border: OutlineInputBorder(
-            borderSide: BorderSide(color: violet[400]!, width: 1.5),
+            borderSide: BorderSide(color: violet[100]!, width: 1.5),
             borderRadius: BorderRadius.circular(8),
           ),
         ),
@@ -59,6 +62,12 @@ class AppTheme {
         //Elevated Button theme. can be used to change the default properties of Elevated Button
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
+                textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: MyColors.mainWhite)),
+                foregroundColor:
+                    MaterialStateProperty.all<Color>(MyColors.mainWhite),
                 backgroundColor:
                     MaterialStateProperty.all<Color>(MyColors.primary),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(

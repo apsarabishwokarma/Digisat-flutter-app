@@ -1,5 +1,5 @@
 import 'package:digisat_app/auth/login_page.dart';
-import 'package:digisat_app/widgets/material.dart';
+import 'package:digisat_app/themes/material.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'verify_email_screen.dart';

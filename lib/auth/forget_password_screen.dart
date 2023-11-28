@@ -35,29 +35,32 @@ class ForgetPassword extends StatelessWidget {
               const SizedBox(height: 15),
               const Text(
                 "Please enter your email address. We will send a password reset link to your email.",
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.w400),
               ),
               const SizedBox(height: 50),
               TextFormField(
-                decoration:
-                    const InputDecoration(labelText: 'Email', border: OutlineInputBorder(), hintText: AutofillHints.email),
+                decoration: const InputDecoration(
+                    labelText: 'Email',
+                    border: OutlineInputBorder(),
+                    hintText: AutofillHints.email),
                 validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return 'please enter you email address';
-                  }
-                  if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").hasMatch(value)) {
-                    return 'please enter  valid email address';
-                  }
-                  /**^: Asserts the start of the line.
-[a-zA-Z0-9+_.-]+: Matches one or more characters that are either letters (both uppercase and lowercase), digits, or the special characters '+', '_', '.', or '-'.
-@: Matches the '@' symbol.
-[a-zA-Z0-9.-]+: Matches one or more characters that are either letters (both uppercase and lowercase), digits, or the special characters '.', or '-'.
-$: Asserts the end of the line. */
-                  // Additional check for the domain
-                  if (!value.endsWith('gmail.com')) {
-                    return 'Please enter a valid Gmail address';
-                  }
-                  return null;
+//                   if (value == null || value.isEmpty) {
+//                     return 'please enter you email address';
+//                   }
+//                   if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").hasMatch(value)) {
+//                     return 'please enter  valid email address';
+//                   }
+//                   /**^: Asserts the start of the line.
+// [a-zA-Z0-9+_.-]+: Matches one or more characters that are either letters (both uppercase and lowercase), digits, or the special characters '+', '_', '.', or '-'.
+// @: Matches the '@' symbol.
+// [a-zA-Z0-9.-]+: Matches one or more characters that are either letters (both uppercase and lowercase), digits, or the special characters '.', or '-'.
+// $: Asserts the end of the line. */
+//                   // Additional check for the domain
+//                   if (!value.endsWith('gmail.com')) {
+//                     return 'Please enter a valid Gmail address';
+//                   }
+//                   return null;
                 },
               ),
               const SizedBox(height: 40),

@@ -1,5 +1,5 @@
 import 'package:digisat_app/auth/login_page.dart';
-import 'package:digisat_app/widgets/material.dart';
+import 'package:digisat_app/themes/material.dart';
 import 'package:flutter/material.dart';
 
 class VerifyEmail extends StatefulWidget {

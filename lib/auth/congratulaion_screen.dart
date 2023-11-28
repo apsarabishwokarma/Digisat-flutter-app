@@ -18,7 +18,7 @@ class CongratulationPage extends StatelessWidget {
           children: [
             const SizedBox(height: 160),
             Image.asset(
-              "assets/Images/congratulationimage.png",
+              "assets/images/congratulationImage.png",
               height: 250,
               width: 250,
             ),
