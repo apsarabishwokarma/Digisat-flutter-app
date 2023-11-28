@@ -4,6 +4,7 @@ const MaterialColor violet = MaterialColor(
   0xFF8A2BE2, // Primary color value
   <int, Color>{
     10: Color(0xFFF1F5F9), // Shade 10
+    20: Color(0xFFF5F3FF), // Shade 10
     50: Color(0xFFE6D3FF), // Shade 50
     100: Color(0xFFC8A6FF), // Shade 100
     200: Color(0xFFA97AFF), // Shade 200

@@ -11,13 +11,67 @@ class AppTheme {
           primarySwatch: Colors.deepPurple,
         ),
         scaffoldBackgroundColor: Colors.white,
-        textTheme: GoogleFonts.interTextTheme(),
-        
+        textTheme: TextTheme(
+          displayLarge: GoogleFonts.plusJakartaSans(
+            fontSize: 64,
+            fontWeight: FontWeight.bold,
+          ),
+          displayMedium: GoogleFonts.plusJakartaSans(
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+          ),
+          displaySmall: GoogleFonts.plusJakartaSans(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+          headlineMedium: GoogleFonts.plusJakartaSans(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+          // bodyLarge
+          bodyLarge: GoogleFonts.plusJakartaSans(
+            fontSize: 18,
+            fontWeight: FontWeight.bold,
+          ),
+          // bodyMedium
+          bodyMedium: GoogleFonts.plusJakartaSans(
+            fontSize: 16,
+          ),
+          // bodySmall
+          bodySmall: GoogleFonts.plusJakartaSans(
+            fontSize: 14,
+          ),
+          labelSmall: GoogleFonts.plusJakartaSans(
+            fontSize: 10,
+            height: 12 / 10,
+            fontWeight: FontWeight.w500,
+          ),
+          titleMedium: GoogleFonts.plusJakartaSans(
+            fontSize: 14,
+            letterSpacing: -0.01,
+            fontWeight: FontWeight.w500,
+          ),
+          titleSmall: GoogleFonts.plusJakartaSans(
+            fontSize: 12,
+            letterSpacing: -0.01,
+            fontWeight: FontWeight.w600,
+          ),
+          // Button
+          labelLarge: GoogleFonts.plusJakartaSans(
+            fontSize: 16,
+            height: 22 / 16,
+            letterSpacing: -0.01,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
 
-        
         //outline button theme. can be used to change the default properties of outline button
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
+            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    side: const BorderSide(color: violet))),
             side: MaterialStateProperty.all<BorderSide>(
                 BorderSide(color: violet.shade200)),
           ),
@@ -57,6 +111,9 @@ class AppTheme {
             borderSide: BorderSide(color: violet[100]!, width: 1.5),
             borderRadius: BorderRadius.circular(8),
           ),
+          labelStyle: GoogleFonts.inter(
+              fontWeight: FontWeight.w500,
+              color: MyColors.mainBlack.withOpacity(0.5)),
         ),
 
         //Elevated Button theme. can be used to change the default properties of Elevated Button

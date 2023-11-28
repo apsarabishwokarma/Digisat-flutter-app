@@ -1,6 +1,5 @@
 import 'package:digisat_app/auth/forget_password_screen.dart';
 import 'package:digisat_app/auth/signup_page.dart';
-import 'package:digisat_app/pages/home_page.dart';
 import 'package:digisat_app/profile_setting/setting_cards.dart';
 import 'package:digisat_app/themes/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -54,17 +53,17 @@ class LoginPage extends StatelessWidget {
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                     hintText: AutofillHints.email),
-                validator: (value) {
-                  // if (value == null || value.isEmpty) {
-                  //   return 'Please enter your email address';
-                  // }
-                  // Email regex validation
-                  // if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
-                  //     .hasMatch(value)) {
-                  //   return 'Please enter a valid email address';
-                  // }
-                  // return null;
-                },
+                // validator: (value) {
+                //   // if (value == null || value.isEmpty) {
+                //   //   return 'Please enter your email address';
+                //   // }
+                //   // Email regex validation
+                //   // if (!RegExp(r"^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$")
+                //   //     .hasMatch(value)) {
+                //   //   return 'Please enter a valid email address';
+                //   // }
+                //   // return null;
+                // },
               ),
               const SizedBox(height: 29),
               TextFormField(
