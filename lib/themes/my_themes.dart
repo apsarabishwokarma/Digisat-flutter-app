@@ -11,59 +11,22 @@ class AppTheme {
           primarySwatch: Colors.deepPurple,
         ),
         scaffoldBackgroundColor: Colors.white,
-        textTheme: TextTheme(
-          displayLarge: GoogleFonts.plusJakartaSans(
-            fontSize: 64,
-            fontWeight: FontWeight.bold,
-          ),
-          displayMedium: GoogleFonts.plusJakartaSans(
-            fontSize: 40,
-            fontWeight: FontWeight.bold,
-          ),
-          displaySmall: GoogleFonts.plusJakartaSans(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-          headlineMedium: GoogleFonts.plusJakartaSans(
-            fontSize: 24,
-            fontWeight: FontWeight.bold,
-          ),
-          // bodyLarge
-          bodyLarge: GoogleFonts.plusJakartaSans(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-          // bodyMedium
-          bodyMedium: GoogleFonts.plusJakartaSans(
-            fontSize: 16,
-          ),
-          // bodySmall
-          bodySmall: GoogleFonts.plusJakartaSans(
+        textTheme: GoogleFonts.plusJakartaSansTextTheme(TextTheme(
+          bodySmall: TextStyle(
             fontSize: 14,
-          ),
-          labelSmall: GoogleFonts.plusJakartaSans(
-            fontSize: 10,
-            height: 12 / 10,
+            height: 1.4,
+            fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
             fontWeight: FontWeight.w500,
+            color: MyColors.mainBlack,
           ),
-          titleMedium: GoogleFonts.plusJakartaSans(
-            fontSize: 14,
-            letterSpacing: -0.01,
-            fontWeight: FontWeight.w500,
-          ),
-          titleSmall: GoogleFonts.plusJakartaSans(
-            fontSize: 12,
-            letterSpacing: -0.01,
-            fontWeight: FontWeight.w600,
-          ),
-          // Button
-          labelLarge: GoogleFonts.plusJakartaSans(
+          titleMedium: TextStyle(
             fontSize: 16,
-            height: 22 / 16,
-            letterSpacing: -0.01,
-            fontWeight: FontWeight.w600,
+            height: 1.4,
+            fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
+            fontWeight: FontWeight.w700,
+            color: MyColors.mainBlack,
           ),
-        ),
+        )),
 
         //outline button theme. can be used to change the default properties of outline button
         outlinedButtonTheme: OutlinedButtonThemeData(
@@ -119,9 +82,11 @@ class AppTheme {
         //Elevated Button theme. can be used to change the default properties of Elevated Button
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ButtonStyle(
-                textStyle: MaterialStateProperty.all<TextStyle>(const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
+                textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(
+                    fontSize: 14,
+                    height: 1.4,
+                    fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
+                    fontWeight: FontWeight.w700,
                     color: MyColors.mainWhite)),
                 foregroundColor:
                     MaterialStateProperty.all<Color>(MyColors.mainWhite),

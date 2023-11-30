@@ -1,3 +1,4 @@
+import 'package:digisat_app/pages/dashboard/view_test_details.dart';
 import 'package:digisat_app/themes/dimentions.dart';
 import 'package:digisat_app/themes/material.dart';
 import 'package:digisat_app/themes/my_colors.dart';
@@ -43,18 +44,17 @@ class UserDashboard extends ConsumerWidget {
                 children: [
                   Text(
                     "Hello, Username",
-                    style: Theme.of(context)
-                        .textTheme
-                        .titleLarge
-                        ?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
-                  const SizedBox(
-                    width: 32,
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
                   ),
                   OutlinedButton(
                     style: ButtonStyle(
                       padding: MaterialStateProperty.all(
-                          const EdgeInsets.symmetric(horizontal: 4)),
+                          const EdgeInsets.symmetric(horizontal: 8)),
                     ),
                     onPressed: () {},
                     child: Row(
@@ -68,8 +68,9 @@ class UserDashboard extends ConsumerWidget {
                           style:
                               Theme.of(context).textTheme.titleMedium?.copyWith(
                                     color: Theme.of(context).primaryColor,
+                                    fontSize: 12,
                                   ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -110,7 +111,7 @@ class UserDashboard extends ConsumerWidget {
                   color: MyColors.primary.withOpacity(0.2)),
               child: TableCalendar(
                 onDaySelected: (selectedDay, focusedDay) {},
-
+                weekendDays: const [DateTime.saturday, DateTime.sunday],
                 headerStyle: const HeaderStyle(
                   leftChevronPadding: EdgeInsets.all(0),
                   titleTextStyle: TextStyle(
@@ -123,7 +124,6 @@ class UserDashboard extends ConsumerWidget {
                 },
                 calendarFormat: CalendarFormat.week,
                 daysOfWeekHeight: 40,
-                // selectedDayPredicate: (day) => isSameDay(day, DateTime.now()),
                 calendarStyle: CalendarStyle(
                   selectedDecoration: BoxDecoration(
                     color: Theme.of(context).primaryColor,
@@ -134,11 +134,11 @@ class UserDashboard extends ConsumerWidget {
                     fontWeight: FontWeight.bold,
                   ),
                   todayDecoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor.withOpacity(0.2),
+                    color: MyColors.primary,
                     borderRadius: BorderRadius.circular(8),
                   ),
                   todayTextStyle: const TextStyle(
-                    color: Colors.black,
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                   outsideTextStyle: const TextStyle(
@@ -147,47 +147,64 @@ class UserDashboard extends ConsumerWidget {
                   ),
                 ),
                 focusedDay: DateTime.now(),
-                firstDay: DateTime.now().subtract(Duration(days: 350)),
-                lastDay: DateTime.now().add(Duration(days: 356)),
+                firstDay: DateTime.now().subtract(const Duration(days: 350)),
+                lastDay: DateTime.now().add(const Duration(days: 356)),
               ),
             ),
             Container(
               width: double.infinity,
               margin: const EdgeInsets.only(top: 24),
-              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
                 border: Border.all(color: MyColors.primary.withOpacity(0.5)),
               ),
               child: Column(
                 children: [
-                  Row(
-                    children: [
-                      Text(
-                        "View Details",
-                        style: Theme.of(context).textTheme.bodyLarge,
-                      ),
-                      const Spacer(),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.orange.withOpacity(0.2),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 4),
-                          child: Text(
-                            "Test in 7 days ",
-                            style: Theme.of(context)
-                                .textTheme
-                                .titleSmall
-                                ?.copyWith(
-                                  color: Colors.orange,
-                                ),
+                  Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: violet[20] ?? MyColors.primary.withOpacity(0.2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 16.0),
+                      child: Row(
+                        children: [
+                          const SizedBox(
+                            width: 16,
                           ),
-                        ),
-                      )
-                    ],
+                          Text(
+                            "Test Details",
+                            style:
+                                Theme.of(context).textTheme.bodyLarge?.copyWith(
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                          ),
+                          const Spacer(),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.orange.withOpacity(0.2),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 12, vertical: 4),
+                              child: Text(
+                                "Test in 7 days ",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleSmall
+                                    ?.copyWith(
+                                      color: Colors.orange,
+                                    ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 16,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 16,
@@ -195,8 +212,14 @@ class UserDashboard extends ConsumerWidget {
                   IntrinsicHeight(
                     child: Row(
                       children: [
+                        const SizedBox(
+                          width: 16,
+                        ),
                         const Expanded(
-                          child: ViewDetailNames(),
+                          child: ViewDetailNames(
+                            marks: "40/100",
+                            title: "Time Spend",
+                          ),
                         ),
                         VerticalDivider(
                           thickness: 2,
@@ -206,7 +229,10 @@ class UserDashboard extends ConsumerWidget {
                           width: 12,
                         ),
                         const Expanded(
-                          child: ViewDetailNames(),
+                          child: ViewDetailNames(
+                            marks: "40/100",
+                            title: "Total Test Taken",
+                          ),
                         ),
                       ],
                     ),
@@ -217,8 +243,14 @@ class UserDashboard extends ConsumerWidget {
                   IntrinsicHeight(
                     child: Row(
                       children: [
+                        const SizedBox(
+                          width: 16,
+                        ),
                         const Expanded(
-                          child: ViewDetailNames(),
+                          child: ViewDetailNames(
+                            marks: "40/100",
+                            title: "Total Test Taken",
+                          ),
                         ),
                         VerticalDivider(
                           thickness: 2,
@@ -228,7 +260,10 @@ class UserDashboard extends ConsumerWidget {
                           width: 12,
                         ),
                         const Expanded(
-                          child: ViewDetailNames(),
+                          child: ViewDetailNames(
+                            marks: "1400",
+                            title: "Predicted Score",
+                          ),
                         ),
                       ],
                     ),
@@ -237,8 +272,15 @@ class UserDashboard extends ConsumerWidget {
                     height: 24,
                   ),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ViewDetailNames(),
+                      const SizedBox(
+                        width: 16,
+                      ),
+                      const ViewDetailNames(
+                        marks: "1300",
+                        title: "Average Score",
+                      ),
                       const Spacer(),
                       Stack(
                         children: [
@@ -281,18 +323,34 @@ class UserDashboard extends ConsumerWidget {
                             ),
                           )
                         ],
-                      )
+                      ),
+                      const SizedBox(
+                        width: 16,
+                      ),
                     ],
                   ),
                   const SizedBox(
                     height: 24,
                   ),
-                  ElevatedButton(
-                      onPressed: () {},
-                      child: const SizedBox(
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        bottom: 16.0, left: 16, right: 16),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const ViewTestDetails(),
+                          ));
+                        },
+                        child: const SizedBox(
                           height: 48,
                           width: double.maxFinite,
-                          child: Center(child: Text("View more details"))))
+                          child: Center(
+                            child: Text(
+                              "View more details",
+                            ),
+                          ),
+                        )),
+                  )
                 ],
               ),
             )
@@ -304,8 +362,12 @@ class UserDashboard extends ConsumerWidget {
 }
 
 class ViewDetailNames extends StatelessWidget {
+  final String title;
+  final String marks;
   const ViewDetailNames({
     super.key,
+    required this.title,
+    required this.marks,
   });
 
   @override
@@ -316,17 +378,22 @@ class ViewDetailNames extends StatelessWidget {
         Row(
           children: [
             const CircleAvatar(
-              radius: 6,
+              radius: 4.2,
               backgroundColor: MyColors.primary,
             ),
             const SizedBox(
-              width: 8,
+              width: 4,
             ),
-            Text(
-              "Total test taken",
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: MyColors.mainBlack.withOpacity(0.6),
-                  ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.35,
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                      color: MyColors.mainBlack.withOpacity(0.6),
+                    ),
+                overflow: TextOverflow.ellipsis,
+                softWrap: true,
+              ),
             ),
           ],
         ),
@@ -336,8 +403,8 @@ class ViewDetailNames extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 22.0),
           child: Text(
-            "19/100",
-            style: Theme.of(context).textTheme.labelLarge,
+            marks,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
         )
       ],

@@ -44,7 +44,7 @@ class ForgetPassword extends StatelessWidget {
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                     hintText: AutofillHints.email),
-                validator: (value) {
+                // validator: (value) {
 //                   if (value == null || value.isEmpty) {
 //                     return 'please enter you email address';
 //                   }
@@ -61,7 +61,7 @@ class ForgetPassword extends StatelessWidget {
 //                     return 'Please enter a valid Gmail address';
 //                   }
 //                   return null;
-                },
+                // },
               ),
               const SizedBox(height: 40),
               ElevatedButton(
