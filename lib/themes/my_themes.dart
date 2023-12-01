@@ -17,11 +17,10 @@ class AppTheme {
             height: 1.4,
             fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
             fontWeight: FontWeight.w500,
-            color: MyColors.mainBlack,
           ),
           titleMedium: TextStyle(
             fontSize: 16,
-            height: 1.4,
+            height: 1.5,
             fontFamily: GoogleFonts.plusJakartaSans().fontFamily,
             fontWeight: FontWeight.w700,
             color: MyColors.mainBlack,

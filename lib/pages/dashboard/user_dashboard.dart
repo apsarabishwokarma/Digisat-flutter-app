@@ -1,3 +1,4 @@
+import 'package:digisat_app/pages/dashboard/helper/percatage_indicator.dart';
 import 'package:digisat_app/pages/dashboard/view_test_details.dart';
 import 'package:digisat_app/themes/dimentions.dart';
 import 'package:digisat_app/themes/material.dart';
@@ -226,7 +227,7 @@ class UserDashboard extends ConsumerWidget {
                           color: MyColors.primary.withOpacity(0.3),
                         ),
                         const SizedBox(
-                          width: 12,
+                          width: 6,
                         ),
                         const Expanded(
                           child: ViewDetailNames(
@@ -257,7 +258,7 @@ class UserDashboard extends ConsumerWidget {
                           color: MyColors.primary.withOpacity(0.3),
                         ),
                         const SizedBox(
-                          width: 12,
+                          width: 6,
                         ),
                         const Expanded(
                           child: ViewDetailNames(
@@ -271,60 +272,22 @@ class UserDashboard extends ConsumerWidget {
                   const SizedBox(
                     height: 24,
                   ),
-                  Row(
+                  const Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
+                      SizedBox(
                         width: 16,
                       ),
-                      const ViewDetailNames(
+                      ViewDetailNames(
                         marks: "1300",
                         title: "Average Score",
                       ),
-                      const Spacer(),
-                      Stack(
-                        children: [
-                          const SizedBox(
-                            height: 130,
-                            width: 130,
-                            child: CircularProgressIndicator(
-                              backgroundColor: Colors.grey,
-                              strokeWidth: 12,
-                              value: 0.5,
-                              color: MyColors.primary,
-                            ),
-                          ),
-                          Positioned.fill(
-                            child: Align(
-                              alignment: Alignment.center,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    "Good",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .labelLarge
-                                        ?.copyWith(
-                                            color: MyColors.mainBlack
-                                                .withOpacity(0.5)),
-                                  ),
-                                  Text(
-                                    "62.5%",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .titleLarge
-                                        ?.copyWith(
-                                            color: MyColors.mainBlack,
-                                            fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          )
-                        ],
+                      Spacer(),
+                      PercentageIndicator(
+                        percentage: 62.5,
+                        title: "Good",
                       ),
-                      const SizedBox(
+                      SizedBox(
                         width: 16,
                       ),
                     ],
