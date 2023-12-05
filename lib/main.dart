@@ -1,4 +1,5 @@
 import 'package:digisat_app/auth/login_page.dart';
+import 'package:digisat_app/pages/dashboard/reading_writing_detail_page.dart';
 import 'package:digisat_app/pages/dashboard/user_dashboard.dart';
 import 'package:digisat_app/splash_screen/splash_page.dart';
 import 'package:digisat_app/test/calender_test.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'DigiSat',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.themeData(),
-      home: UserDashboard(),
+      home: ReadingWritingDetailPage(),
     );
   }
 }
